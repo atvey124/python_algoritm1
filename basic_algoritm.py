@@ -48,4 +48,25 @@ sum = a[index]
 while index < len(a):
     sum = sum + (a[index]^2)
     index += 1
-print(sum)
+print(f"сумма квадратов всего массива: {sum}")
+
+
+#Задача про собаку и двух друзей,алгоритм решения
+distance = 10000
+first_friend_speed = 10
+second_friend_speed = 20
+dog_speed = 40
+friend = 2
+count = 0
+while distance > 10:
+    if friend == 1:
+        time = distance/(dog_speed + second_friend_speed)
+        friend = 2
+        distance = distance - (first_friend_speed + second_friend_speed) * time
+        count += 1
+    elif friend == 2:
+        time = distance / (dog_speed + first_friend_speed)
+        friend = 2
+        distance = distance - (first_friend_speed + second_friend_speed) * time
+        count += 1
+print(f"собака пробежит: {count} раз")
