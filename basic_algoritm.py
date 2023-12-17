@@ -60,12 +60,12 @@ friend = 2
 count = 0
 while distance > 10:
     if friend == 1:
-        time = distance/(dog_speed + second_friend_speed)
+        time = distance/(dog_speed + first_friend_speed)
         friend = 2
         distance = distance - (first_friend_speed + second_friend_speed) * time
         count += 1
     elif friend == 2:
-        time = distance / (dog_speed + first_friend_speed)
+        time = distance / (dog_speed + second_friend_speed)
         friend = 2
         distance = distance - (first_friend_speed + second_friend_speed) * time
         count += 1
